@@ -9,13 +9,15 @@ import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { EditableTableComponent } from './editable-table/editable-table.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditableTableComponent
+    EditableTableComponent,
+    InputNumberComponent
   ],
   imports: [
     BrowserModule,
