@@ -46,7 +46,7 @@
 
       <td>
         <ng-container *ngIf="!editCache[data.key].edit">
-          {{data.freeclick}}
+          {{data.freeclick | freeclickString}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
           <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.freeclick"> -->

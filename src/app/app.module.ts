@@ -13,6 +13,7 @@ import { InputNumberComponent } from './input-number/input-number.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { TimePickerComponent } from './time-picker/time-picker.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { FreeclickStringPipe } from './freeclick-string.pipe';
 
 registerLocaleData(en);
 
@@ -23,7 +24,8 @@ registerLocaleData(en);
     InputNumberComponent,
     DatePickerComponent,
     TimePickerComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    FreeclickStringPipe
   ],
   imports: [
     BrowserModule,
@@ -35,4 +37,4 @@ registerLocaleData(en);
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

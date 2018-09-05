@@ -17,16 +17,16 @@ const cleanTheData = data => {
     .map((obj, index) => {
       obj.key = index.toString();
       return obj;
-    })
-    .map(x => {
-      x.freeclickString = x.freeclick ? 'true' : 'false';
-      return x;
-    })
-    .map(({ freeclick, ...keepRest }) => keepRest)
-    .map(({ freeclickString: freeclick, ...keepRest }) => ({
-      freeclick,
-      ...keepRest
-    }));
+    });
+  // .map(x => {
+  //   x.freeclickString = x.freeclick ? 'true' : 'false';
+  //   return x;
+  // })
+  // .map(({ freeclick, ...keepRest }) => keepRest)
+  // .map(({ freeclickString: freeclick, ...keepRest }) => ({
+  //   freeclick,
+  //   ...keepRest
+  // }));
   return clean;
 };
 export default cleanTheData;
