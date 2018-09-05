@@ -9,8 +9,10 @@ import cleanTheData from '../../data/cleanTheData';
 export class EditableTableComponent implements OnInit {
   i = 1;
   editCache = {};
-  dataSet = [];
+  // dataSet = [];
+  dataSet = cleanTheData(raw);
   raw = raw;
+
   startEdit(key: string): void {
     this.editCache[key].edit = true;
   }
@@ -37,14 +39,14 @@ export class EditableTableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    for (let i = 0; i < 100; i++) {
-      this.dataSet.push({
-        key: i.toString(),
-        name: `Edrward ${i}`,
-        age: 32,
-        address: `London Park no. ${i}`
-      });
-    }
+    // for (let i = 0; i < 100; i++) {
+    //   this.dataSet.push({
+    //     key: i.toString(),
+    //     name: `Edrward ${i}`,
+    //     age: 32,
+    //     address: `London Park no. ${i}`
+    //   });
+    // }
     console.log(cleanTheData(raw));
     this.updateEditCache();
   }
