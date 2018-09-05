@@ -29,17 +29,18 @@
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
           <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date"> -->
-          <!-- TODO convert string tp Date object -->
           <nz-date-picker [(ngModel)]="editCache[data.key].data.date" [nzFormat]="dateFormat"></nz-date-picker>
         </ng-container>
       </td>
 
       <td>
         <ng-container *ngIf="!editCache[data.key].edit">
-          {{data.time}}
+          {{data.date | date:'hh:mm'}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.time">
+          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date"> -->
+          <!-- TODO: save time input -->
+          <nz-time-picker [(ngModel)]="editCache[data.key].data.date" nzFormat="HH:mm"></nz-time-picker>
         </ng-container>
       </td>
 

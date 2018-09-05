@@ -13,6 +13,7 @@ export class EditableTableComponent implements OnInit {
   dataSet = cleanTheData(raw);
   raw = raw;
   dateFormat = 'dd.MM.YYYY';
+  timeFormat = 'HH:mm';
 
   startEdit(key: string): void {
     this.editCache[key].edit = true;
