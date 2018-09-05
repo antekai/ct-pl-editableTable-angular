@@ -18,7 +18,8 @@
           {{data.camp_cpc}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.camp_cpc">
+          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.camp_cpc"> -->
+          <nz-input-number [(ngModel)]="editCache[data.key].data.camp_cpc" [nzMin]="0" [nzMax]="3" [nzStep]=".05"></nz-input-number>
         </ng-container>
       </td>
 
@@ -66,8 +67,6 @@
           <input type="text" nz-input [(ngModel)]="editCache[data.key].data.PlistaProduct">
         </ng-container>
       </td>
-
-
 
       <!-- OPERATIONS: edit -->
       <td>
