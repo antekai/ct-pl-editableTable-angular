@@ -25,10 +25,12 @@
 
       <td>
         <ng-container *ngIf="!editCache[data.key].edit">
-          {{data.date}}
+          {{data.date | date:'dd.MM.yyyy'}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date">
+          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date"> -->
+          <!-- TODO convert string tp Date object -->
+          <nz-date-picker [(ngModel)]="editCache[data.key].data.date" [nzFormat]="dateFormat"></nz-date-picker>
         </ng-container>
       </td>
 

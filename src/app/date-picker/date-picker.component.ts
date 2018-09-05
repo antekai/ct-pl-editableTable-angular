@@ -5,9 +5,8 @@ import { en_US, zh_CN, NzI18nService } from 'ng-zorro-antd';
 @Component({
   selector: 'app-date-picker',
   templateUrl: './date-picker.component.html',
-  styleUrls: ['./date-picker.component.'less'']
+  styleUrls: ['./date-picker.component.less']
 })
-
 export class DatePickerComponent {
   date = null; // new Date();
   dateRange = []; // [ new Date(), addDays(new Date(), 3) ];
