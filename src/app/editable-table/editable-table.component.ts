@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import raw from '../../data/plRawData.json';
+import raw from '../../data/plRawData.json';
+import cleanTheData from '../../data/cleanTheData';
 @Component({
   selector: 'app-editable-table',
   templateUrl: './editable-table.component.html',
@@ -9,7 +10,7 @@ export class EditableTableComponent implements OnInit {
   i = 1;
   editCache = {};
   dataSet = [];
-
+  raw = raw;
   startEdit(key: string): void {
     this.editCache[key].edit = true;
   }
@@ -44,7 +45,7 @@ export class EditableTableComponent implements OnInit {
         address: `London Park no. ${i}`
       });
     }
-    // console.log(raw);
+    console.log(cleanTheData(raw));
     this.updateEditCache();
   }
 }
