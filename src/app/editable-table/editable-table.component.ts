@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+// import raw from '../../data/plRawData.json';
 @Component({
   selector: 'app-editable-table',
   templateUrl: './editable-table.component.html',
@@ -44,6 +44,7 @@ export class EditableTableComponent implements OnInit {
         address: `London Park no. ${i}`
       });
     }
+    // console.log(raw);
     this.updateEditCache();
   }
 }
