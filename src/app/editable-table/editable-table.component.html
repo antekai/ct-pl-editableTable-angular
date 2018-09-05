@@ -72,7 +72,19 @@
           {{data.PlistaProduct}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.PlistaProduct">
+          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.PlistaProduct"> -->
+          <nz-select style="width: 120px;" [(ngModel)]="editCache[data.key].data.PlistaProduct" nzAllowClear>
+            <nz-option nzValue="Product 1" nzLabel="Product 1"></nz-option>
+            <nz-option nzValue="Product 2" nzLabel="Product 2"></nz-option>
+            <nz-option nzValue="Product 3" nzLabel="Product 3"></nz-option>
+            <nz-option nzValue="Product 4" nzLabel="Product 4"></nz-option>
+            <nz-option nzValue="Product 5" nzLabel="Product 5"></nz-option>
+            <nz-option nzValue="Product 6" nzLabel="Product 6"></nz-option>
+            <nz-option nzValue="Product 7" nzLabel="Product 7"></nz-option>
+            <nz-option nzValue="Product 8" nzLabel="Product 8"></nz-option>
+            <nz-option nzValue="Product 9" nzLabel="Product 9"></nz-option>
+            <nz-option nzValue="Product 10" nzLabel="Product 10"></nz-option>
+          </nz-select>
         </ng-container>
       </td>
 
