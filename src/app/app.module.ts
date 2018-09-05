@@ -14,6 +14,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { TimePickerComponent } from './time-picker/time-picker.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { FreeclickStringPipe } from './freeclick-string.pipe';
+import { RadioGroupComponent } from './radio-group/radio-group.component';
 
 registerLocaleData(en);
 
@@ -25,7 +26,8 @@ registerLocaleData(en);
     DatePickerComponent,
     TimePickerComponent,
     CheckboxComponent,
-    FreeclickStringPipe
+    FreeclickStringPipe,
+    RadioGroupComponent
   ],
   imports: [
     BrowserModule,

@@ -59,7 +59,11 @@
           {{data.network}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.network">
+          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.network"> -->
+          <nz-radio-group [(ngModel)]="editCache[data.key].data.network">
+            <label nz-radio nzValue="a">a</label>
+            <label nz-radio nzValue="b">b</label>
+          </nz-radio-group>
         </ng-container>
       </td>
 
