@@ -10,6 +10,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { EditableTableComponent } from './editable-table/editable-table.component';
 import { InputNumberComponent } from './input-number/input-number.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
 
 registerLocaleData(en);
 
@@ -17,7 +18,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     EditableTableComponent,
-    InputNumberComponent
+    InputNumberComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,
