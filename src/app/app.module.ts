@@ -12,6 +12,7 @@ import { EditableTableComponent } from './editable-table/editable-table.componen
 import { InputNumberComponent } from './input-number/input-number.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { TimePickerComponent } from './time-picker/time-picker.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 registerLocaleData(en);
 
@@ -21,7 +22,8 @@ registerLocaleData(en);
     EditableTableComponent,
     InputNumberComponent,
     DatePickerComponent,
-    TimePickerComponent
+    TimePickerComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,

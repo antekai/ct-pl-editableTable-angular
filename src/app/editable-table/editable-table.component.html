@@ -49,7 +49,8 @@
           {{data.freeclick}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.freeclick">
+          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.freeclick"> -->
+          <label nz-checkbox [(ngModel)]="editCache[data.key].data.freeclick"></label>
         </ng-container>
       </td>
 
