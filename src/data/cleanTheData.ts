@@ -11,7 +11,7 @@ const cleanTheData = data => {
     .map(({ date, ...keepRest }) => keepRest)
     .map(({ germanDate: date, ...keepRest }) => ({ date, ...keepRest }))
     .map((obj, index) => {
-      obj.key = index;
+      obj.key = index.toString();
       return obj;
     })
     .map(x => {

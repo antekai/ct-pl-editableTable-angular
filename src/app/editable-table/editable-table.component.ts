@@ -9,7 +9,7 @@ import cleanTheData from '../../data/cleanTheData';
 export class EditableTableComponent implements OnInit {
   i = 1;
   editCache = {};
-  // dataSet = [];
+  // antdataSet = [];
   dataSet = cleanTheData(raw);
   raw = raw;
 
@@ -40,13 +40,14 @@ export class EditableTableComponent implements OnInit {
 
   ngOnInit(): void {
     // for (let i = 0; i < 100; i++) {
-    //   this.dataSet.push({
+    //   this.antdataSet.push({
     //     key: i.toString(),
     //     name: `Edrward ${i}`,
     //     age: 32,
     //     address: `London Park no. ${i}`
     //   });
     // }
+    // console.log(this.antdataSet);
     console.log(cleanTheData(raw));
     this.updateEditCache();
   }

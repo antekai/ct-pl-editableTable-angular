@@ -1,9 +1,6 @@
 <nz-table #editRowTable nzBordered [nzData]="dataSet">
   <thead>
     <tr>
-      <!-- <th nzWidth="25%">Name</th>
-      <th nzWidth="15%">Age</th>
-      <th nzWidth="40%">Address</th> -->
       <th nzWidth="10%">camp_cpc</th>
       <th nzWidth="15%">date</th>
       <th nzWidth="10%">time</th>
@@ -15,117 +12,77 @@
   </thead>
   <tbody>
     <tr *ngFor="let data of editRowTable.data">
-      <td>
-        <div class="editable-cell">
-          <div class="editable-cell-text-wrapper">
-            <ng-container *ngIf="!editCache[data.key].edit">
-              {{data.camp_cpc}}
-            </ng-container>
-            <ng-container *ngIf="editCache[data.key].edit">
-              <input type="text" nz-input [(ngModel)]="editCache[data.key].data.camp_cpc">
-            </ng-container>
-          </div>
-        </div>
-      </td>
 
-      <!-- <td>
+      <td>
         <ng-container *ngIf="!editCache[data.key].edit">
           {{data.camp_cpc}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
           <input type="text" nz-input [(ngModel)]="editCache[data.key].data.camp_cpc">
         </ng-container>
-      </td> -->
+      </td>
+
       <td>
-        <td>
+        <ng-container *ngIf="!editCache[data.key].edit">
+          {{data.date}}
+        </ng-container>
+        <ng-container *ngIf="editCache[data.key].edit">
+          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date">
+        </ng-container>
+      </td>
+
+      <td>
+        <ng-container *ngIf="!editCache[data.key].edit">
+          {{data.time}}
+        </ng-container>
+        <ng-container *ngIf="editCache[data.key].edit">
+          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.time">
+        </ng-container>
+      </td>
+
+      <td>
+        <ng-container *ngIf="!editCache[data.key].edit">
+          {{data.freeclick}}
+        </ng-container>
+        <ng-container *ngIf="editCache[data.key].edit">
+          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.freeclick">
+        </ng-container>
+      </td>
+
+      <td>
+        <ng-container *ngIf="!editCache[data.key].edit">
+          {{data.network}}
+        </ng-container>
+        <ng-container *ngIf="editCache[data.key].edit">
+          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.network">
+        </ng-container>
+      </td>
+
+      <td>
+        <ng-container *ngIf="!editCache[data.key].edit">
+          {{data.PlistaProduct}}
+        </ng-container>
+        <ng-container *ngIf="editCache[data.key].edit">
+          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.PlistaProduct">
+        </ng-container>
+      </td>
+
+
+
+      <!-- OPERATIONS: edit -->
+      <td>
+        <div class="editable-row-operations">
           <ng-container *ngIf="!editCache[data.key].edit">
-            {{data.date}}
+            <a (click)="startEdit(data.key)">Edit</a>
           </ng-container>
           <ng-container *ngIf="editCache[data.key].edit">
-            <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date">
+            <a (click)="saveEdit(data.key)">Save</a>
+            <nz-popconfirm [nzTitle]="'Sure to cancel?'" (nzOnConfirm)="cancelEdit(data.key)">
+              <a nz-popconfirm>Cancel</a>
+            </nz-popconfirm>
           </ng-container>
-        </td>
-        <td>
-          <td>
-            <ng-container *ngIf="!editCache[data.key].edit">
-              {{data.time}}
-            </ng-container>
-            <ng-container *ngIf="editCache[data.key].edit">
-              <input type="text" nz-input [(ngModel)]="editCache[data.key].data.time">
-            </ng-container>
-          </td>
-          <td>
-            <td>
-              <ng-container *ngIf="!editCache[data.key].edit">
-                {{data.freeclick}}
-              </ng-container>
-              <ng-container *ngIf="editCache[data.key].edit">
-                <input type="text" nz-input [(ngModel)]="editCache[data.key].data.freeclick">
-              </ng-container>
-            </td>
-            <td>
-              <td>
-                <ng-container *ngIf="!editCache[data.key].edit">
-                  {{data.network}}
-                </ng-container>
-                <ng-container *ngIf="editCache[data.key].edit">
-                  <input type="text" nz-input [(ngModel)]="editCache[data.key].data.network">
-                </ng-container>
-              </td>
-              <td>
-                <td>
-                  <ng-container *ngIf="!editCache[data.key].edit">
-                    {{data.PlistaProduct}}
-                  </ng-container>
-                  <ng-container *ngIf="editCache[data.key].edit">
-                    <input type="text" nz-input [(ngModel)]="editCache[data.key].data.PlistaProduct">
-                  </ng-container>
-                </td>
-                <td>
-                  <!-- <td>
-        <div class="editable-cell">
-          <div class="editable-cell-text-wrapper">
-            <ng-container *ngIf="!editCache[data.key].edit">
-              {{data.name}}
-            </ng-container>
-            <ng-container *ngIf="editCache[data.key].edit">
-              <input type="text" nz-input [(ngModel)]="editCache[data.key].data.name">
-            </ng-container>
-          </div>
         </div>
       </td>
-      <td>
-        <ng-container *ngIf="!editCache[data.key].edit">
-          {{data.age}}
-        </ng-container>
-        <ng-container *ngIf="editCache[data.key].edit">
-          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.age"> -->
-                  <!-- <nz-input-number [(ngModel)]="editCache[data.key].data.age" [nzMin]="1" [nzMax]="10" [nzStep]="1"></nz-input-number>
-        </ng-container>
-      </td>
-      <td>
-        <ng-container *ngIf="!editCache[data.key].edit">
-          {{data.address}}
-        </ng-container>
-        <ng-container *ngIf="editCache[data.key].edit">
-          <input type="text" nz-input [(ngModel)]="editCache[data.key].data.address">
-        </ng-container>
-      </td>
-      <td>  -->
-
-                  <!-- OPERATIONS: edit -->
-                  <div class="editable-row-operations">
-                    <ng-container *ngIf="!editCache[data.key].edit">
-                      <a (click)="startEdit(data.key)">Edit</a>
-                    </ng-container>
-                    <ng-container *ngIf="editCache[data.key].edit">
-                      <a (click)="saveEdit(data.key)">Save</a>
-                      <nz-popconfirm [nzTitle]="'Sure to cancel?'" (nzOnConfirm)="cancelEdit(data.key)">
-                        <a nz-popconfirm>Cancel</a>
-                      </nz-popconfirm>
-                    </ng-container>
-                  </div>
-                </td>
     </tr>
   </tbody>
 </nz-table>
