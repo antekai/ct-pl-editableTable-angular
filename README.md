@@ -10,7 +10,7 @@ Editable table with [Angular 6](https://angular.io/) and [NG-ZORRO - Ant Design 
 
 ## Preview
 
-URL: https://editabletable-react.netlify.com
+URL: https://editabletable-angular.netlify.com/
 ![](preview-editable-table-antd.gif)
 
 ## Installation
