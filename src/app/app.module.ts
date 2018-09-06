@@ -11,11 +11,11 @@ import en from '@angular/common/locales/en';
 import { EditableTableComponent } from './editable-table/editable-table.component';
 import { InputNumberComponent } from './input-number/input-number.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
-import { TimePickerComponent } from './time-picker/time-picker.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { FreeclickStringPipe } from './freeclick-string.pipe';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { SelectComponent } from './select/select.component';
+import { TimePicker2Component } from './time-picker2/time-picker2.component';
 
 registerLocaleData(en);
 
@@ -25,11 +25,11 @@ registerLocaleData(en);
     EditableTableComponent,
     InputNumberComponent,
     DatePickerComponent,
-    TimePickerComponent,
     CheckboxComponent,
     FreeclickStringPipe,
     RadioGroupComponent,
-    SelectComponent
+    SelectComponent,
+    TimePicker2Component
   ],
   imports: [
     BrowserModule,

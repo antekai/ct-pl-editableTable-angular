@@ -1,17 +1,17 @@
 import { fakeAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TimePickerComponent } from './time-picker.component';
+import { TimePicker2Component } from './time-picker2.component';
 
-describe('TimePickerComponent', () => {
-  let component: TimePickerComponent;
-  let fixture: ComponentFixture<TimePickerComponent>;
+describe('TimePicker2Component', () => {
+  let component: TimePicker2Component;
+  let fixture: ComponentFixture<TimePicker2Component>;
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimePickerComponent ]
+      declarations: [ TimePicker2Component ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TimePickerComponent);
+    fixture = TestBed.createComponent(TimePicker2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

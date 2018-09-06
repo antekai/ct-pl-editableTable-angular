@@ -39,7 +39,7 @@
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
           <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date"> -->
-          <!-- TODO: save time input -->
+          <!-- TODO: FIX BUG: saves only if user changes date or deletes initial time input   -->
           <nz-time-picker [(ngModel)]="editCache[data.key].data.date" nzFormat="HH:mm"></nz-time-picker>
         </ng-container>
       </td>
