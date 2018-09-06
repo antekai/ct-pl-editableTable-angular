@@ -21,7 +21,6 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
-    "moment": "^2.22.2",
     "ng-zorro-antd": "^1.4.1",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
