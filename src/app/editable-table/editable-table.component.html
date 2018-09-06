@@ -35,7 +35,7 @@
 
       <td>
         <ng-container *ngIf="!editCache[data.key].edit">
-          {{data.date | date:'hh:mm'}}
+          {{data.date | date:'HH:mm'}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
           <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date"> -->
