@@ -1,27 +1,36 @@
-# ZorroTest
+# EditableTable-react
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+Editable table with [Angular 6](https://angular.io/) and [NG-ZORRO - Ant Design of Angular](https://ng.ant.design/docs/introduce/en).
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Preview](#preview)
+- [Installation](#installation)
+- [Support](#support)
 
-## Code scaffolding
+## Preview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+URL: https://editabletable-react.netlify.com
+![](preview-editable-table-antd.gif)
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Install [Node.js](https://nodejs.org/en/), [Git](https://git-scm.com/) and then:
 
-## Running unit tests
+```sh
+git clone https://github.com/antekai/ct-pl-editableTable-react.git editableTable-angular
+cd editableTable-angular
+npm install
+ng serve -o
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Features
 
-## Running end-to-end tests
+- Raw data preprocess and render to a table
+- Edit and save per record(row): number, checkbox, select, datePicker, timePicker, radio input for respective data type
+- UI-kit: [ant-design](https://ant.design/)
+- Netlify CD
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Support
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Please [open an issue](https://github.com/antekai/ct-pl-editableTable-react/issues/new) for support.
