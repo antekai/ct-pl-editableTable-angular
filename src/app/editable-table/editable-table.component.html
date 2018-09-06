@@ -18,7 +18,6 @@
           {{data.camp_cpc}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.camp_cpc"> -->
           <nz-input-number [(ngModel)]="editCache[data.key].data.camp_cpc" [nzMin]="0" [nzMax]="3" [nzStep]=".05"></nz-input-number>
         </ng-container>
       </td>
@@ -28,7 +27,6 @@
           {{data.date | date:'dd.MM.yyyy'}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date"> -->
           <nz-date-picker [(ngModel)]="editCache[data.key].data.date" [nzFormat]="dateFormat"></nz-date-picker>
         </ng-container>
       </td>
@@ -38,7 +36,6 @@
           {{data.date | date:'HH:mm'}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.date"> -->
           <!-- TODO: FIX BUG: saves only if user changes date or deletes initial time input   -->
           <nz-time-picker [(ngModel)]="editCache[data.key].data.date" nzFormat="HH:mm"></nz-time-picker>
         </ng-container>
@@ -49,7 +46,6 @@
           {{data.freeclick | freeclickString}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.freeclick"> -->
           <label nz-checkbox [(ngModel)]="editCache[data.key].data.freeclick"></label>
         </ng-container>
       </td>
@@ -59,7 +55,6 @@
           {{data.network}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.network"> -->
           <nz-radio-group [(ngModel)]="editCache[data.key].data.network">
             <label nz-radio nzValue="a">a</label>
             <label nz-radio nzValue="b">b</label>
@@ -72,7 +67,6 @@
           {{data.PlistaProduct}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <!-- <input type="text" nz-input [(ngModel)]="editCache[data.key].data.PlistaProduct"> -->
           <nz-select style="width: 120px;" [(ngModel)]="editCache[data.key].data.PlistaProduct" nzAllowClear>
             <nz-option nzValue="Product 1" nzLabel="Product 1"></nz-option>
             <nz-option nzValue="Product 2" nzLabel="Product 2"></nz-option>
