@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import raw from '../../data/plRawData.json';
 import cleanTheData from '../../data/cleanTheData';
 @Component({
@@ -9,11 +9,9 @@ import cleanTheData from '../../data/cleanTheData';
 export class EditableTableComponent implements OnInit {
   i = 1;
   editCache = {};
-  // antdataSet = [];
-  dataSet = cleanTheData(raw);
   raw = raw;
+  dataSet = cleanTheData(raw);
   dateFormat = 'dd.MM.YYYY';
-  timeFormat = 'HH:mm';
 
   startEdit(key: string): void {
     this.editCache[key].edit = true;
@@ -41,16 +39,7 @@ export class EditableTableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // for (let i = 0; i < 100; i++) {
-    //   this.antdataSet.push({
-    //     key: i.toString(),
-    //     name: `Edrward ${i}`,
-    //     age: 32,
-    //     address: `London Park no. ${i}`
-    //   });
-    // }
-    // console.log(this.antdataSet);
-    console.log(cleanTheData(raw));
+    console.log(this.dataSet);
     this.updateEditCache();
   }
 }
