@@ -15,10 +15,11 @@
 
       <td>
         <ng-container *ngIf="!editCache[data.key].edit">
-          {{data.camp_cpc}}
+          {{data.camp_cpc | campEuro}}
         </ng-container>
         <ng-container *ngIf="editCache[data.key].edit">
-          <nz-input-number [(ngModel)]="editCache[data.key].data.camp_cpc" [nzMin]="0" [nzMax]="3" [nzStep]=".05"></nz-input-number>
+          <nz-input-number [(ngModel)]="editCache[data.key].data.camp_cpc" [nzMin]="0" [nzMax]="3" [nzStep]=".05" [nzFormatter]="formatterEuro"
+            [nzParser]="parserEuro"></nz-input-number>
         </ng-container>
       </td>
 

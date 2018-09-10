@@ -16,6 +16,7 @@ import { FreeclickStringPipe } from './freeclick-string.pipe';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { SelectComponent } from './select/select.component';
 import { TimePicker2Component } from './time-picker2/time-picker2.component';
+import { CampEuroPipe } from './camp-euro.pipe';
 
 registerLocaleData(en);
 
@@ -29,7 +30,8 @@ registerLocaleData(en);
     FreeclickStringPipe,
     RadioGroupComponent,
     SelectComponent,
-    TimePicker2Component
+    TimePicker2Component,
+    CampEuroPipe
   ],
   imports: [
     BrowserModule,

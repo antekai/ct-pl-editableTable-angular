@@ -12,6 +12,8 @@ export class EditableTableComponent implements OnInit {
   raw = raw;
   dataSet = cleanTheData(raw);
   dateFormat = 'dd.MM.YYYY';
+  formatterEuro = value => `€ ${value}`;
+  parserEuro = value => value.replace('€ ', '');
 
   startEdit(key: string): void {
     this.editCache[key].edit = true;
