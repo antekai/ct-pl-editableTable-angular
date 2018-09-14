@@ -23,22 +23,22 @@ export class PlistaFirebaseService {
       headers: headers
     });
   }
+  // getPlistaRawData() {
+  //   return (
+  //     this.http.get('https://ct-plista.firebaseio.com/data').pipe(
+  //       map((response: Response) => {
+  //         const data = response.json();
+  //         // post-process data
+  //         // ......
+  //         return data;
+  //       })
+  //     ),
+  //     catchError((error: Response) => {
+  //       return Observable.throw('Something went wrong');
+  //     })
+  //   );
+  // }
   getPlistaData() {
-    return (
-      this.http.get('https://ct-plista.firebaseio.com/data').pipe(
-        map((response: Response) => {
-          const data = response.json();
-          // post-process data
-          // ......
-          return data;
-        })
-      ),
-      catchError((error: Response) => {
-        return Observable.throw('Something went wrong');
-      })
-    );
-  }
-  getPlistaRaw() {
     return this.http.get('https://ct-plista.firebaseio.com/data.json').pipe(
       map((response: Response) => {
         return response.json();

@@ -1,0 +1,28 @@
+<nz-table #basicTable [nzData]="dataSet">
+  <thead>
+    <tr>
+      <th nzWidth="5%">key</th>
+      <th nzWidth="10%">camp_cpc</th>
+      <th nzWidth="15%">date</th>
+      <th nzWidth="10%">time</th>
+      <th nzWidth="10%">freeclick</th>
+      <th nzWidth="10%">network</th>
+      <th nzWidth="15%">PlistaProduct</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.key}}</td>
+      <td>{{data.camp_cpc | campEuro}}</td>
+      <td>{{data.date | date:'dd.MM.yyyy'}}</td>
+      <td>{{data.date | date:'HH:mm'}}</td>
+      <td>{{data.freeclick | freeclickString}}</td>
+      <td>{{data.network}}</td>
+      <td>{{data.PlistaProduct}}</td>
+      <td>
+        <a><button nz-button>Edit</button> </a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

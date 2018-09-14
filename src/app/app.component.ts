@@ -13,15 +13,15 @@ export class AppComponent {
 
   plData = cleanTheData(raw);
 
-  onPost() {
-    this.plistaFirebase
-      .postPlistaData(this.plData)
-      .subscribe(
-        response => console.log(response),
-        error => console.log(error)
-      );
-  }
-  onPut() {
+  // onPost() {
+  //   this.plistaFirebase
+  //     .postPlistaData(this.plData)
+  //     .subscribe(
+  //       response => console.log(response),
+  //       error => console.log(error)
+  //     );
+  // }
+  onPutDefaultData() {
     this.plistaFirebase
       .putPlistaData(this.plData)
       .subscribe(
@@ -31,7 +31,7 @@ export class AppComponent {
   }
   onGet() {
     this.plistaFirebase
-      .getPlistaRaw()
+      .getPlistaData()
       .subscribe(
         response => console.log(response),
         error => console.log(error)
