@@ -19,6 +19,7 @@ import { SelectComponent } from './select/select.component';
 import { TimePicker2Component } from './time-picker2/time-picker2.component';
 import { CampEuroPipe } from './camp-euro.pipe';
 import { PlistaFirebaseService } from './plista-firebase.service';
+import { AppRoutingModule } from './app-routing.module';
 
 registerLocaleData(en);
 
@@ -41,7 +42,8 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     NgZorroAntdModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, PlistaFirebaseService],
   bootstrap: [AppComponent]
