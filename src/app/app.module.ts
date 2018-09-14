@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
@@ -17,6 +18,7 @@ import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { SelectComponent } from './select/select.component';
 import { TimePicker2Component } from './time-picker2/time-picker2.component';
 import { CampEuroPipe } from './camp-euro.pipe';
+import { PlistaFirebaseService } from './plista-firebase.service';
 
 registerLocaleData(en);
 
@@ -38,9 +40,10 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    HttpModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, PlistaFirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
