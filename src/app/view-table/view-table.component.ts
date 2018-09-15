@@ -14,18 +14,19 @@ export class ViewTableComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {}
-  dataSet = cleanTheData(raw);
+  // dataSet = cleanTheData(raw);
+  dataSet = [];
 
   onEdit() {
     this.router.navigate(['edit'], { relativeTo: this.route });
   }
   ngOnInit(): void {
-    // this.plistaFirebase
-    //   .getPlistaData()
-    //   .subscribe(
-    //     response => (this.dataSet = response),
-    //     error => console.log(error)
-    //   );
+    this.plistaFirebase
+      .getPlistaData()
+      .subscribe(
+        response => (this.dataSet = response),
+        error => console.log(error)
+      );
     console.log(this.dataSet);
   }
 }
