@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <nz-table #basicTable [nzData]="dataSet">
   <thead>
     <tr>
@@ -21,7 +22,8 @@
       <td>{{data.network}}</td>
       <td>{{data.PlistaProduct}}</td>
       <td>
-        <a><button nz-button>Edit</button> </a>
+        <a [routerLink]="['edit', data.key]" href="#"><button nz-button>Edit</button> </a>
+
       </td>
     </tr>
   </tbody>

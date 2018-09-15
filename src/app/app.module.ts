@@ -4,11 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { registerLocaleData } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import en from '@angular/common/locales/en';
+import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 
 import { AppComponent } from './app.component';
-import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
-import { registerLocaleData } from '@angular/common';
-import en from '@angular/common/locales/en';
 import { EditableTableComponent } from './editable-table/editable-table.component';
 import { InputNumberComponent } from './input-number/input-number.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
@@ -22,6 +23,7 @@ import { FreeclickStringPipe } from './freeclick-string.pipe';
 import { CampEuroPipe } from './camp-euro.pipe';
 import { PlistaFirebaseService } from './plista-firebase.service';
 import { AppRoutingModule } from './app-routing.module';
+import { FormEditComponent } from './form-edit/form-edit.component';
 
 registerLocaleData(en);
 
@@ -37,7 +39,8 @@ registerLocaleData(en);
     TimePicker2Component,
     ViewTableComponent,
     FreeclickStringPipe,
-    CampEuroPipe
+    CampEuroPipe,
+    FormEditComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ registerLocaleData(en);
     HttpClientModule,
     NgZorroAntdModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, PlistaFirebaseService],
   bootstrap: [AppComponent]
