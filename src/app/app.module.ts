@@ -11,12 +11,6 @@ import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 
 import { AppComponent } from './app.component';
 import { EditableTableComponent } from './editable-table/editable-table.component';
-import { InputNumberComponent } from './input-number/input-number.component';
-import { DatePickerComponent } from './date-picker/date-picker.component';
-import { CheckboxComponent } from './checkbox/checkbox.component';
-import { RadioGroupComponent } from './radio-group/radio-group.component';
-import { SelectComponent } from './select/select.component';
-import { TimePicker2Component } from './time-picker2/time-picker2.component';
 import { ViewTableComponent } from './view-table/view-table.component';
 // pipes,services,modules
 import { FreeclickStringPipe } from './freeclick-string.pipe';
@@ -31,12 +25,6 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     EditableTableComponent,
-    InputNumberComponent,
-    DatePickerComponent,
-    CheckboxComponent,
-    RadioGroupComponent,
-    SelectComponent,
-    TimePicker2Component,
     ViewTableComponent,
     FreeclickStringPipe,
     CampEuroPipe,
