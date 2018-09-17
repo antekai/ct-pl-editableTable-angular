@@ -45,6 +45,10 @@ export class FormEditComponent implements OnInit {
       );
   }
   submitForm() {
+    for (const i in this.validateForm.controls) {
+      this.validateForm.controls[i].markAsDirty();
+      this.validateForm.controls[i].updateValueAndValidity();
+    }
     const {
       camp_cpc,
       date,
