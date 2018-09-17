@@ -24,9 +24,9 @@ export class ViewTableComponent implements OnInit {
   ) {}
   // dataSet = cleanTheData(raw);
 
-  onEdit() {
-    this.router.navigate(['edit'], { relativeTo: this.route });
-  }
+  // onEdit() {
+  //   this.router.navigate(['edit'], { relativeTo: this.route });
+  // }
   ngOnInit(): void {
     this.plistaFirebase
       .getPlistaData()
