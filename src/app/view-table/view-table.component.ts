@@ -9,13 +9,20 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './view-table.component.html'
 })
 export class ViewTableComponent implements OnInit {
+  dataSet: {
+    camp_cpc: number;
+    date: string;
+    freeClick: boolean;
+    key: string;
+    network: string;
+    PlistaProduct: string;
+  }[] = [];
   constructor(
     private plistaFirebase: PlistaFirebaseService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
   // dataSet = cleanTheData(raw);
-  dataSet = [];
 
   onEdit() {
     this.router.navigate(['edit'], { relativeTo: this.route });
@@ -27,6 +34,7 @@ export class ViewTableComponent implements OnInit {
         response => (this.dataSet = response),
         error => console.log(error)
       );
-    console.log(this.dataSet);
+    // console.log(this.dataSet.filter(x => x.key == 0));
+    // console.log(this.dataSet.find(x => x.key == 0));
   }
 }

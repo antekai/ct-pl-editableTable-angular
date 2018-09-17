@@ -45,4 +45,13 @@ export class PlistaFirebaseService {
       })
     );
   }
+  getPlistaDataRecord(key) {
+    return this.http.get('https://ct-plista.firebaseio.com/data.json').pipe(
+      map((response: Response) => {
+        const data = response.json();
+        const record = data.find(x => x.key === key);
+        return record;
+      })
+    );
+  }
 }
