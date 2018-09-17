@@ -11,7 +11,7 @@ import raw from '../data/plRawData.json';
 export class AppComponent {
   constructor(private plistaFirebase: PlistaFirebaseService) {}
 
-  plData = cleanTheData(raw);
+  plDataDefault = cleanTheData(raw);
 
   // onPost() {
   //   this.plistaFirebase
@@ -23,7 +23,7 @@ export class AppComponent {
   // }
   onPutDefaultData() {
     this.plistaFirebase
-      .putPlistaData(this.plData)
+      .putPlistaData(this.plDataDefault)
       .subscribe(
         response => console.log(response),
         error => console.log(error)

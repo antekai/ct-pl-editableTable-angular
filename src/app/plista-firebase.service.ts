@@ -45,7 +45,7 @@ export class PlistaFirebaseService {
       })
     );
   }
-  getPlistaDataRecord(key) {
+  getPlistaDataRecord(key: string) {
     return this.http.get('https://ct-plista.firebaseio.com/data.json').pipe(
       map((response: Response) => {
         const data = response.json();
@@ -54,4 +54,5 @@ export class PlistaFirebaseService {
       })
     );
   }
+  putPlistaDataRecord(key: string) {}
 }
