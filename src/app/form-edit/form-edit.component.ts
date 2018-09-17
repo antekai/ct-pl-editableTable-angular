@@ -6,7 +6,7 @@ import {
   Validators
 } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Subscription, concat } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { PlistaFirebaseService } from '../plista-firebase.service';
 @Component({
   selector: 'app-form-edit',
