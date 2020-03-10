@@ -1,4 +1,4 @@
-# EditableTable-react
+# EditableTable-angular
 
 Editable table with [Angular 6](https://angular.io/) and [NG-ZORRO - Ant Design of Angular](https://ng.ant.design/docs/introduce/en).
 
@@ -18,7 +18,7 @@ URL: https://editabletable-angular.netlify.com/
 Install [Node.js](https://nodejs.org/en/), [Git](https://git-scm.com/) and then:
 
 ```sh
-git clone https://github.com/antekai/ct-pl-editableTable-react.git editableTable-angular
+git clone https://github.com/antekai/ct-pl-editableTable-angular.git editableTable-angular
 cd editableTable-angular
 npm install
 ng serve -o
